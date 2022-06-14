@@ -28,16 +28,16 @@ function wp_discord_admin()
         <?php do_settings_sections('wp_discord_notify_settings');?> <!-- call the settings section -->
         <div class="form-group">
             <label for="wp_discord_settings[webhook]"><?php _e("Discord Webhook URL", 'wp_discord_domain')?></label>
-            <input type="text" name="wp_discord_settings[webhook]" id="wp_discord_settings[webhook]" placeholder="<?php _e("Webhook URL", 'wp_discord_domain')?>" value="<?php echo $wp_discord_options['webhook'] ?>" required>
+            <input type="text" name="wp_discord_settings[webhook]" id="wp_discord_settings[webhook]" placeholder="<?php _e("Webhook URL", 'wp_discord_domain')?>" value="<?php echo $wp_discord_options ? $wp_discord_options['webhook'] : ''; ?>" required>
         </div>
         <div class="form-group">
         <label for="wp_discord_settings[botname]"><?php _e("Discord Bot Name", "wp_discord_domain");?></label>
-        <input type="text" name="wp_discord_settings[botname]" id="wp_discord_settings[botname]" placeholder="<?php _e("Bot Name", 'wp_discord_domain')?>" value="<?php echo $wp_discord_options['botname'] ?>" required>
+        <input type="text" name="wp_discord_settings[botname]" id="wp_discord_settings[botname]" placeholder="<?php _e("Bot Name", 'wp_discord_domain')?>" value="<?php echo $wp_discord_options ? $wp_discord_options['botname'] : ''; ?>" required>
         </div>
 
         <div class="form-group">
             <label for="wp_discord_settings[activated]"><?php _e("Notifiy On New Post Publish", "wp_discord_domain");?></label>
-            <input type="checkbox" name="wp_discord_settings[activated]" id="wp_discord_settings[activated]" value="1" <?php checked(1, $wp_discord_options['activated']);?> />
+            <input type="checkbox" name="wp_discord_settings[activated]" id="wp_discord_settings[activated]" value="1" <?php checked(1, ($wp_discord_options ? $wp_discord_options['activated'] : ''));?> />
         </div>
         <?php submit_button("Store Discord Information");?>
 
