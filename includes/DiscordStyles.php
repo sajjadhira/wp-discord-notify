@@ -1,4 +1,5 @@
 <?php
+defined('ABSPATH') or die();
 
 function wp_discord_notify_styles()
 {

@@ -1,4 +1,5 @@
 <?php
+defined('ABSPATH') or die();
 /*
 Plugin Name: WP Discord Notification
 Plugin URI: https://inihub.com/plugins/wp-discord-notification/
@@ -42,9 +43,7 @@ function wp_discord_notify_now($postid)
             file_get_contents($webhook, false, $context); // send data to discord
 
         }
-
     }
-
 }
 
 add_action('publish_post', 'wp_discord_notify_now');

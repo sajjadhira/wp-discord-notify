@@ -1,14 +1,17 @@
 <?php
 /*
 Plugin Name: WP Discord Notification
-Plugin URI: https://inihub.com/plugins/wp-discord-notification/
+Plugin URI: http://pluginoo.com/wp-discord-notification/
 Description: This is discord notification plugin for WordPress.
-Author: Sajjad Hossain
-Author URI: https://inihub.com/
-Version: 1.0
+Author: Pluginoo
+Author URI: http://pluginoo.com/
+Version: 1.0.0
  */
 
 // get discord options from options table
+
+defined('ABSPATH') or die();
+
 $wp_discord_options = get_option('wp_discord_settings');
 
 include plugin_dir_path(__FILE__) . 'includes/DiscordNotify.php'; // include discord notify function
