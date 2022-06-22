@@ -1,4 +1,4 @@
-# Welcome
+# WordPress Discord Notification Plugin
 
 Welcome to WP Discord Notification Plugin. Using this plugin you can notify to your discord channel when post is publish to your blog.
 
